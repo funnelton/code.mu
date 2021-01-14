@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  function returnLastDay (year, month) {
+    let date = new Date(year, month, 0);
+    let lastDay = date.getDate();
+    
+
+    return lastDay;
+  }
+
+  console.log(returnLastDay(2019, 2));
+
+</script>
+
+</body>
+</html>

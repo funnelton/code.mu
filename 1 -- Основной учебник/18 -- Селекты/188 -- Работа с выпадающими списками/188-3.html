@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <select id="select">
+    <option value="1">ПН</option>
+    <option value="2">ВТ</option>
+    <option value="3">СР</option>
+    <option value="4">ЧТ</option>
+    <option value="5">ПТ</option>
+    <option value="6">СБ</option>
+    <option value="7">ВС</option>
+  </select>
+  
+  <input type="button" value="check" id="button">
+
+  <p id="paragraph"></p>
+
+
+  <script>
+    'use strict';
+
+    let select = document.querySelector('#select');
+    let button = document.querySelector('#button');
+    let paragraph = document.querySelector('#paragraph');
+
+    button.addEventListener('click', function () {
+      if (select.value == 6 || select.value == 7) {
+        paragraph.innerHTML = 'Выбран выходной';
+      } else {
+        paragraph.innerHTML = 'Выбран будний';
+      }
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      text-align: center;
+    }
+
+    .color1 {
+      background-color: red;
+    }
+
+    .color2 {
+      background-color: green;
+    }
+  </style>
+
+</head>
+<body>
+
+  <table id="table">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  
+  <script>
+    'use strict';
+
+    let trs = document.querySelectorAll('tr');
+    let diagonal = [];
+    let notDiagonal = [];
+
+    for (let i = 0; i < trs.length; i++) {
+
+      let tds = trs[i].querySelectorAll('td');
+      for (let j = 0; j < tds.length; j++) {
+        if (i == j) {
+          diagonal.push(tds[j]);
+        } else {
+          notDiagonal.push(tds[j]);
+        }
+      }
+    }
+
+    for (let elem of diagonal) {
+      elem.addEventListener('click', function () {
+        for (let elem of diagonal) {
+          elem.classList = 'color1';
+        }
+      });
+    }
+
+    for (let elem of notDiagonal) {
+      elem.addEventListener('click', function () {
+        for (elem of diagonal) {
+          elem.classList = 'color2';
+        }
+      });
+    }
+
+  </script>
+</body>
+</html>

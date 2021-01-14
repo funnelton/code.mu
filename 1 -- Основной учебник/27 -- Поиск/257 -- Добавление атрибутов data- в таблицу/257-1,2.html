@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <table id="table">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  
+  <script>
+    'use strict';
+
+    let trs = document.querySelectorAll('tr');
+
+    for (let i = 0; i < trs.length; i++) {
+      let rowNum = i + 1;
+      trs[i].dataset.row = rowNum;
+
+      let tds = trs[i].querySelectorAll('td');
+
+      for (let j = 0; j < tds.length; j++) {
+        let colNum = j + 1;
+        tds[j].dataset.col = colNum;
+        tds[j].innerHTML = rowNum + ' / ' + colNum;
+      }
+    }
+
+  </script>
+</body>
+</html>

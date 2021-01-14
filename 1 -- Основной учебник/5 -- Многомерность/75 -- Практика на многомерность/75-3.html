@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    'use strict';
+
+    let users = [
+        {
+            name: 'name1',
+            age: 31,
+            active: true,
+        },
+        {
+            name: 'name2',
+            age: 32,
+            active: false,
+        },
+        {
+            name: 'name3',
+            age: 33,
+            active: true,
+        },
+        {
+            name: 'name4',
+            age: 34,
+            active: false,
+        },
+        {
+            name: 'name5',
+            age: 35,
+            active: true,
+        },
+    ];
+
+    for (let obj of users) {
+        if (obj['active']) {
+            console.log(obj);
+        }
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  function getLastDay(month, year) { // функция должна принимать и год
+    let lastDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    
+    if (month != 1) {
+      return lastDays[month]; // если не февраль
+    } else {
+      if (year % 4 == 0) {
+        if (year % 100 == 0) {
+          if (year % 400 == 0) {
+            return 29
+          } else {
+            return 28
+          }
+        } else {
+          return 29
+        }
+      } else {
+        return 28
+      }
+    }
+  }
+
+  console.log(getLastDay(1, 2132));
+
+</script>
+
+</body>
+</html>

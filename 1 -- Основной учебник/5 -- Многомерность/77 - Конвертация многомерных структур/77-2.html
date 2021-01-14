@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    'use strict';
+
+    let events = [
+        {
+            date:  '2019-12-29',
+            event: 'name1'
+        },
+        {
+            date:  '2019-12-31',
+            event: 'name2'
+        },
+        {
+            date:  '2019-12-29',
+            event: 'name3'
+        },
+        {
+            date:  '2019-12-30',
+            event: 'name4'
+        },
+        {
+            date:  '2019-12-29',
+            event: 'name5'
+        },
+        {
+            date:  '2019-12-31',
+            event: 'name6'
+        },
+        {
+            date:  '2019-12-29',
+            event: 'name7'
+        },
+        {
+            date:  '2019-12-30',
+            event: 'name8'
+        },
+        {
+            date:  '2019-12-30',
+            event: 'name9'
+        },
+    ];
+
+    let eventsTable = {};
+
+    for (let obj of events) {
+        if (eventsTable[obj.date] == undefined) {
+            eventsTable[obj.date] = [];
+        }
+        eventsTable[obj.date].push(obj.event);     
+    }
+
+    console.log(eventsTable);
+    
+
+
+</script>
+</body>
+</html>

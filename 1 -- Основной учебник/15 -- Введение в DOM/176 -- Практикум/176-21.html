@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="text" id="input">
+  <input type="button" value="Generate" id="button">
+
+  <script>
+    'use strict';
+
+    function getRandomInt(min, max) {
+      return Math.round(Math.random() * (max - min) + min);
+    }
+
+    function getRandomStr(length) {
+      let litters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+      let str = '';
+
+      while (str.length < length) {
+        str += litters[getRandomInt(0, litters.length - 1)];
+      }
+
+      return str;
+    }
+
+    let input = document.querySelector('#input');
+    let button = document.querySelector('#button');
+
+    button.addEventListener('click', function () {
+      input.value = getRandomStr(8);
+    })
+
+  </script>
+
+</body>
+
+</html>

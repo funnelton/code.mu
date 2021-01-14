@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    'use strict';
+
+    // let data = [
+    //     {
+    //         year:  2019,
+    //         month: 11,
+    //         day: 20,
+    //         data: ['массив с данными']
+    //     },
+    //     {
+    //         year:  2019,
+    //         month: 11,
+    //         day: 21,
+    //         data: ['массив с данными']
+    //     },
+    //     {
+    //         year:  2019,
+    //         month: 12,
+    //         day: 25,
+    //         data: ['массив с данными']
+    //     },
+    //     {
+    //         year:  2019,
+    //         month: 12,
+    //         day: 26,
+    //         data: ['массив с данными']
+    //     },
+    //     {
+    //         year:  2020,
+    //         month: 10,
+    //         day: 29,
+    //         data: ['массив с данными']
+    //     },
+    //     {
+    //         year:  2020,
+    //         month: 10,
+    //         day: 30,
+    //         data: ['массив с данными']
+    //     },
+    //     {
+    //         year:  2020,
+    //         month: 11,
+    //         day: 19,
+    //         data: ['массив с данными']
+    //     },
+    //     {
+    //         year:  2020,
+    //         month: 11,
+    //         day: 20,
+    //         data: ['массив с данными']
+    //     },
+    // ]
+
+    // let year = '2019';
+    // let res = [];
+
+    // for (let elem of data) {
+    //     if (elem.year == year) {
+    //         res.push(elem.data);
+    //     }
+    // }
+
+    // document.write(res);
+
+
+    let data = {
+        2018: {
+            1: {
+                1: ['affair1'],
+                2: ['affair2']
+            },
+            8: {
+                1: ['affair3'],
+                2: ['affair4']
+            }
+        },
+        2019: {
+            2: {
+                3: ['affair5'],
+                4: ['affair6']
+            },
+            7: {
+                3: ['affair7'],
+                4: ['affair8']
+            }
+        },
+        2020: {
+            3: {
+                5: ['affair9'],
+                6: ['affair10']
+            },
+            4: {
+                5: ['affair11'],
+                6: ['affair12']
+            }
+        },
+    };
+
+    let year = 2018;
+    let month = 8;
+    let day = 2;
+    let res = [];
+
+    for (let dataYear in data) {
+        if (dataYear == year) {
+            for (let dataMonth in data[dataYear]) {
+                if (dataMonth == month) {
+                    for (let dataDay in data[dataYear][dataMonth]) {
+                        if (dataDay == day) {
+                            document.write(data[dataYear][dataMonth][dataDay]);
+                        }
+                    }
+                }
+               
+            }
+        }
+    }    
+
+
+</script>
+
+</body>
+</html>

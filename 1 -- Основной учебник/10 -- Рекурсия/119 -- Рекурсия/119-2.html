@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    'use strict';
+
+    let i = 0;
+    
+    
+    let one = 1;
+    let two = 2;
+    let arr = [1, 2];
+    fib(one, two);
+    console.log(arr);
+    
+    function fib(one, two) {
+      let res = one + two;
+      one = two;
+      two = res;
+      arr.push(res);
+      i++;
+
+      if (i != 10) {
+        fib(one, two);
+      }
+
+      return arr;
+    }
+    
+    </script>
+
+</body>
+
+</html>

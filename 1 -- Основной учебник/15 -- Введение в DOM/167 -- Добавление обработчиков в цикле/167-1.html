@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <input type="text" value="1">
+  <input type="text" value="2">
+  <input type="text" value="3">
+  <input type="text" value="4">
+  <input type="text" value="5">
+
+  <script>
+    'use strict';
+
+    function func() {
+      this.value = Number(this.value) + 1;
+    }
+
+    let inputs = document.querySelectorAll('input');
+
+    for (let input of inputs) {
+      input.addEventListener('blur', func);
+    }
+
+
+  </script>
+
+</body>
+
+</html>

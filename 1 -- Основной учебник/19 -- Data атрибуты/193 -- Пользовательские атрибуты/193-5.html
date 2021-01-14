@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  
+  <input id="input" data-min="5" data-max="10">
+
+  <script>
+    'use strict';
+
+    let input = document.querySelector('#input');
+
+    input.addEventListener('blur', function () {
+      if ((input.value).length >= input.dataset.min && (input.value).length <= input.dataset.max) {
+        alert('Вы попали в промежуток');
+      } else {
+        alert('Вы не попали в промежуток'); 
+      }
+    });
+
+
+
+
+
+  </script>
+</body>
+</html>

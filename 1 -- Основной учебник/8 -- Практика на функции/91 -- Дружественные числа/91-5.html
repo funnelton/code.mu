@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  function getOwnDivisors(num) {
+    let res = [];
+    for (let i = 1; i < num; i++) {
+        if (num % i == 0) {
+          res.push(i);
+        }
+    }
+    return res;
+  }
+
+  function getSum(arr) {
+    let res = 0;
+
+    for (let elem of arr) {
+        res += elem;
+    }
+    return res;
+  }
+
+  function getPerfect(num1, num2) {
+    let res = [];
+    for (let i = num1; i <= num2; i++) {
+        if (getSum(getOwnDivisors(i)) == i) {
+          res.push(i);
+        }
+    }
+
+    return res;
+  }
+
+  console.log(getPerfect(1, 1000));
+
+</script>
+
+</body>
+</html>

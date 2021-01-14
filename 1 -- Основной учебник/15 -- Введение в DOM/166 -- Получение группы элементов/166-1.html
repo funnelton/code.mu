@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <p class="paragraph">qwe</p>
+  <p class="paragraph">qwe</p>
+  <p class="paragraph">qwe</p>
+  <input type="button" value="button" id="button">
+  
+<script>
+  'use strict';
+
+  let elements = document.querySelectorAll('.paragraph');
+  let button = document.querySelector('#button');
+
+  button.addEventListener('click', function () {
+    for (let elem of elements) {
+      elem.innerHTML = 'text'
+    }
+  });
+
+
+</script>
+
+</body>
+</html>

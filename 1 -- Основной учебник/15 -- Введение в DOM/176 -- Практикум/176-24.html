@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="text" id="input1">
+  <input type="text" value="0" id="input2">
+
+  <script>
+    'use strict';
+
+    function farenheitToCelsius(num) {
+      num = Number(num);
+
+      return (num - 32) / 1.8;
+    }
+
+    console.log(farenheitToCelsius(500));
+
+    let inputFarenheit = document.querySelector('#input1');
+    let inputCelsius = document.querySelector('#input2');
+
+    inputFarenheit.addEventListener('keydown', function () {
+      console.log(farenheitToCelsius(inputFarenheit.value));
+      inputCelsius.value = farenheitToCelsius(inputFarenheit.value);
+    });
+
+    // let inputFarenheit = document.querySelector('#input1');
+    // let inputCelsius = document.querySelector('#input2');
+
+    // inputFarenheit.addEventListener('keyup', function () {
+
+    //   inputCelsius.value = (inputFarenheit.value - 32) / 1.8;
+    // });
+
+
+
+
+  </script>
+
+</body>
+
+</html>

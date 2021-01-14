@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  function test() {
+    let num = 10;
+    return function () {
+      alert(num);
+      num--;
+    }
+  }
+
+  let func1 = test();
+
+  func1();
+  func1();
+  func1();
+
+</script>
+
+</body>
+</html>

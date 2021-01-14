@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  let now  = new Date();
+  let date = new Date(now.getFullYear(), 2, 8);
+
+  let diff = date - now;
+
+  if (diff > 0) {
+    diff = Math.floor(diff / (1000 * 60 * 60 * 24));
+    console.log('До праздника ' + diff + ' дней');
+  } else if (diff == 0) {
+    console.log('Праздник сегодня');
+  } else {
+    diff = new Date(now.getFullYear() + 1, 2, 8) - now;
+    diff = Math.floor(diff / (1000 * 60 * 60 * 24));
+    console.log('Праздник будет через ' + diff + ' дней');
+  }
+
+
+
+</script>
+
+</body>
+</html>

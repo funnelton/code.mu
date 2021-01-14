@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+
+    .between1and100 {
+      background-color: green;
+    }
+
+    .notbetween1and100 {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="text" id="input">
+
+  <script>
+    'use strict';
+
+    let input = document.querySelector('#input');
+
+    input.addEventListener('blur', function () {
+      if (input.value >= 0 && input.value <= 100) {
+        input.classList.add('between1and100');
+        input.classList.remove('notbetween1and100');
+      } else {
+        input.classList.add('notbetween1and100');
+        input.classList.remove('between1and100');
+      }
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>

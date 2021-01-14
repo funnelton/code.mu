@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="text" id="input" class="inputClass">
+
+  <div id="parent">
+    <div id="child">
+      <p>1</p>
+      <p>2</p>
+    </div>
+  </div>
+  <input type="button" value="Clone" id="button">
+
+  
+  <script>
+    'use strict';
+    let input = document.querySelector('#input');
+    let child = document.querySelector('#child')
+    let button = document.querySelector('#button');
+
+    button.addEventListener('click', function () {
+      let clonedInput = input.cloneNode(true);
+      input.insertAdjacentElement('afterEnd', clonedInput);
+
+      let clonedChild = child.cloneNode(false);
+      child.insertAdjacentElement('afterEnd', clonedChild);
+    });
+
+
+  </script>
+</body>
+</html>

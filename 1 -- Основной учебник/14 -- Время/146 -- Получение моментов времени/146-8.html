@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    'use strict';
+
+    let now = new Date();
+
+    let date1 = new Date(now.getFullYear(), 0, 1);
+    let date2 = new Date(now.getFullYear(), 8, 10);
+
+    let diff = date2 - date1;
+    let diffDay = diff / (1000 * 60 * 60 * 24);
+
+    document.write(Math.floor(diffDay));
+
+  </script>
+
+</body>
+
+</html>

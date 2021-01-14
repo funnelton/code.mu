@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <p id="paragraph"></p>
+
+  <input id="input1" value="">
+  <input id="input2" value="">
+  <input id="input3" value="">
+  <input id="input4" value="">
+  <input id="input5" value="">
+
+  <input id="button" type="button" value="button">
+  
+<script>
+  'use strict';
+
+  let paragraph = document.querySelector('#paragraph');
+  let input1 = document.querySelector('#input1');
+  let input2 = document.querySelector('#input2');
+  let input3 = document.querySelector('#input3');
+  let input4 = document.querySelector('#input4');
+  let input5 = document.querySelector('#input5');
+  let button = document.querySelector('#button');
+
+  button.addEventListener('click', function () {
+    paragraph.innerHTML = (Number(input1.value) + Number(input2.value) + Number(input3.value) + Number(input4.value) + Number(input5.value)) / 5;
+  });
+
+
+</script>
+
+</body>
+</html>

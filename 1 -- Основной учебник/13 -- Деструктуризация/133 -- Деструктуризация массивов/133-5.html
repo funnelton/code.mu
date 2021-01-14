@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  let arr = ['Иван', 'Иванов', 'отдел разработки', 'программист', 2000];
+  // let arr = ['Иван', 'Иванов', 'отдел разработки'];
+
+  let [name, surname, department, position = 'джуниор'] = arr;
+
+  console.log(name);
+  console.log(surname);
+  console.log(department);
+  console.log(position);
+
+</script>
+
+</body>
+</html>

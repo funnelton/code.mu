@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    'use strict';
+
+    let users = [
+        {
+            name: 'name1',
+            active: true,
+        },
+        {
+            name: 'name2',
+            active: false,
+        },
+        {
+            name: 'name3',
+            active: true,
+        },
+        {
+            name: 'name4',
+            active: false,
+        },
+        {
+            name: 'name5',
+            active: true,
+        },
+    ];
+
+    let usersUpdated = [];
+
+    
+    function makeInactive(users) {
+        for (let obj of users) {
+            if (obj['active']) {
+                obj['active'] = false;
+            }
+        }
+    }
+
+    function makeActive(users) {
+        for (let obj of users) {
+            if (!obj['active']) {
+                obj['active'] = true;
+            }
+        }
+    } 
+
+    // makeInactive(users);
+    // console.log(users);
+
+    // makeActive(users);
+    // console.log(users);
+    
+
+
+
+    
+    
+
+
+
+
+</script>
+
+</body>
+</html>

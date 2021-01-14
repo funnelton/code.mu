@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  let date1 = new Date(2000, 8, 1);
+  let date2 = new Date(2010, 1, 15);
+
+  let diff = date2 - date1;
+  let diffDay = Math.floor(diff / (1000 * 60 * 60 * 24));
+  let diffMonth = Math.floor(diffDay / 30);
+  let diffYear = Math.floor(diffMonth / 12);
+
+  document.write('Diff: ' + diff);
+  document.write('<br>');
+  document.write('DiffDay: ' + diffDay);
+  document.write('<br>');
+  document.write('DiffMonth: ' + diffMonth);
+  document.write('<br>');
+  document.write('DiffYear: ' + diffYear);
+
+
+</script>
+
+</body>
+</html>

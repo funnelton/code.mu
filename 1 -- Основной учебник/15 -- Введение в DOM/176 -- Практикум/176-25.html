@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="text" id="input">
+  <input type="button" value="Get factorial" id="button">
+  <div id="div"></div>
+
+  <script>
+    'use strict';
+
+    function getFactorial(num) {
+      num = Number(num);
+      let result = 1;
+
+      for (let i = 1; i <= num; i++) {
+        result *= i;
+      }
+
+      return result;
+    }
+
+    let input = document.querySelector('#input');
+    let button = document.querySelector('#button');
+    let div = document.querySelector('#div');
+
+    button.addEventListener('click', function () {
+      div.innerHTML = getFactorial(input.value);
+    });
+
+  </script>
+
+</body>
+
+</html>

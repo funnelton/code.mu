@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+  'use strict';
+
+  function getLast(digitsAmmount) {
+    let res = '';
+    for (let i = digitsAmmount; i > 0; i--) {
+        res += '9';
+    }
+
+    return Number(res);
+  }
+
+  function getFirst(digitsAmmount) {
+    let res = '11';
+
+    let zeroAmmount = (digitsAmmount / 2 + 1) - 2;
+
+    for (let i = 1; i <= zeroAmmount; i++) {
+        res = res.slice(0,1) + '0' + res.slice(1);
+    }
+
+    return Number(res);
+  }
+
+
+
+</script>
+
+</body>
+</html>

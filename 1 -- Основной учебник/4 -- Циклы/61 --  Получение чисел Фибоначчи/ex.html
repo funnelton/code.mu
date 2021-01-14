@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        // // #61.1
+        // let one = 0;
+        // let two = 1;
+        // let arr = []
+
+        // for (let i = 1; i <= 100; i++) {
+        //     let current = one + two;
+
+        //     one = two;
+        //     two = current;
+
+        //     arr.push(current);
+        // }
+
+        // console.log(arr)
+
+
+        // #61.2
+        let one = 0;
+        let two = 1;
+        let three = 2;
+        let arr = []
+
+        for (let i = 0; i < + 20; i++) {
+            let res = one + two + three;
+
+            one = two;
+            two = three;
+            three = res;
+
+            arr.push(res);
+
+        }
+
+        console.log(arr);
+    </script>
+</body>
+
+</html>

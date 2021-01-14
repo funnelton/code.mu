@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function range(from, to, inclusive) {
+    let res = [];
+
+    from = getRandomInt(from, to);
+    to = getRandomInt(from, to);
+
+    console.log('Number 1: ' + from);
+    console.log('Number 2: ' + to);
+
+    if (inclusive) {
+      for (let i = from; i <= to; i++) {
+          res.push(i);
+      }
+    } else {
+      for (let i = from; i < to; i++) {
+          res.push(i);
+      }
+    }
+
+    return res;
+  }
+
+  console.log(range(10, 25, true));
+  console.log(range(10, 25, false));
+
+</script>
+
+</body>
+</html>

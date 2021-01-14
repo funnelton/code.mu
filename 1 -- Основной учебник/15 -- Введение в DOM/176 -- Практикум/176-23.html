@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+
+    a {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="checkbox" id="checkbox" >
+  <a href="#" id="link">Link</a>
+
+  <script>
+    'use strict';
+
+    let checkbox = document.querySelector('#checkbox');
+    let link = document.querySelector('#link');
+
+    link.addEventListener('click', function () {
+      checkbox.toggleAttribute('checked');
+    })
+  </script>
+
+</body>
+
+</html>

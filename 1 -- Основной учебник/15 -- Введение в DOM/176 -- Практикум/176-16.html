@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p></p>
+  <input type="text" value="0" id="input">
+  <input type="button" value="+" id="plus">
+  <input type="button" value="-" id="minus">
+
+
+  <script>
+    'use strict';
+    let input = document.querySelector('#input');
+    let plusButton = document.querySelector('#plus');
+    let minusButton = document.querySelector('#minus');
+
+    plusButton.addEventListener('click', function () {
+      input.value++;  
+    });
+
+    minusButton.addEventListener('click', function decreaseValue() {
+      if (input.value == 0) {
+        this.removeEventListener(click, decreaseValue);
+      } else {
+        input.value--;
+      }
+    });
+
+
+  </script>
+
+</body>
+
+</html>

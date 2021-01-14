@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div>
+    <ul>
+      <li>text</li>
+      <li>text</li>
+      <li id="elem">text</li>
+      <li>text</li>
+      <li>text</li>
+    </ul>
+  </div>
+
+  <script>
+    'use strict';
+
+    let elem = document.querySelector('#elem');
+
+    // 177-4
+    let parent = elem.parentElement;
+    parent.style.border = '1px solid red';
+
+    // 177-5
+    let parentParent = parent.parentElement;
+    parentParent.style.border = '1px solid red';
+
+  </script>
+
+</body>
+
+</html>

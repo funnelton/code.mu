@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    'use strict';
+
+    let events = {
+        '2019-12-29': ['name1', 'name3', 'name5', 'name7'],
+        '2019-12-30': ['name4', 'name8', 'name9'],
+        '2019-12-31': ['name2', 'name6'],
+    };
+
+    let table = [];
+
+    for (let obj in events) {
+        for (let elem of events[obj]) {
+            table.push({
+                date: obj,
+                event: elem
+            });
+        };
+    }
+
+    console.log(table);
+    
+
+
+</script>
+</body>
+</html>

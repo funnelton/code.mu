@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    'use strict';
+
+    // #57.1
+    // let obj = {};
+
+    // obj['пн'] = 1;
+    // obj['вт'] = 2;
+    // obj['ср'] = 3;
+    // obj['чт'] = 4;
+    // obj['пт'] = 5;
+    // obj['сб'] = 5;
+    // obj['вс'] = 7;
+
+    // console.log(obj);
+
+
+    // #57.2
+    // let arr1 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+    // let arr2 = [1, 2, 3, 4, 5, 6, 7];
+    // let obj = {};
+
+    // for(let i = 0; i < arr1.length; i++) {
+    //     obj[arr1[i]] = arr2[i];
+    // }
+
+    // console.log(obj);
+
+
+    // #57.3
+    // let arr1 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+    // let arr2 = [1, 2, 3, 4, 5, 6, 7];
+    // let obj = {};
+
+    // for(let i = 0; i < arr2.length; i++) {
+    //     obj[arr2[i]] = arr1[i];
+    // }
+
+    // console.log(obj);
+
+
+    // #57.4
+    // let obj = {'a': 12, 'b': 21, 'c': 13, 'd': 23, 'e': 17};
+    // let obj2 = {};
+
+    // for (let key in obj) {
+    //     if(obj[key] >= 10 && obj[key] <= 20) {
+    //         obj2[key] = obj[key];
+    //     }
+    // }
+    // console.log(obj2);
+
+
+    // #57.5
+    // let obj = {1: 'пн', 2: 'вт', 3: 'ср', 4: 'чт', 5: 'пт', 6: 'сб', 7: 'вс'};
+    // let newObj = {};
+
+    // for (let key in obj) {
+    //     if (key % 2 == 0) {
+    //         console.log(obj[key]);
+    //         newObj[key] = obj[key];
+    //     }
+    // }
+    // console.log(newObj);
+
+
+    // #57.6
+    // let obj = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5};
+
+    // for (let key in obj) {
+    //     obj[key] = obj[key] ** 2;
+    // }
+    // console.log(obj);
+
+    // #57.7
+    let obj = {a: 1, b: 2, c: 3, d: 4, e: 5};
+    let result = {};
+
+    for(let key in obj) {
+        result[obj[key]] = key;
+    }
+
+    console.log(result);
+</script>
+</body>
+</html>

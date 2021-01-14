@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    'use strict';
+
+    let affairs = {
+        '2019-12-31': ['массив дел'],
+        '2018-11-29': ['массив дел'],
+        '2018-11-30': ['массив дел'],
+        '2018-12-27': ['массив дел'],
+        '2019-12-29': ['массив дел'],
+        '2019-12-30': ['массив дел'],
+        '2018-12-30': ['массив дел'],
+        '2018-12-31': ['массив дел'],
+    }
+
+    
+    function showByDate(date) {
+        for (let key in affairs) {
+            if (key[3] == 8) {
+                console.log(key);
+            }
+        }
+    }
+
+    showByDate('2018-12-31');
+
+
+
+
+
+</script>
+
+</body>
+</html>

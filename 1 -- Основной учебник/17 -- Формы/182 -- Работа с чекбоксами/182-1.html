@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="checkbox">
+  <input type="button" value="Check" id="button1">
+  <input type="button" value="Uncheck" id="button2">
+
+
+  <script>
+    'use strict';
+
+    let checkbox = document.querySelector('#checkbox');
+    let checkButton = document.querySelector('#button1');
+    let uncheckButton = document.querySelector('#button2');
+
+    checkButton.addEventListener('click', function () {
+      checkbox.setAttribute('checked', 'checked');
+    });
+
+    uncheckButton.addEventListener('click', function () {
+      checkbox.removeAttribute('checked');
+    });
+  </script>
+
+</body>
+</html>

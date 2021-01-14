@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    td {
+      height: 50px;
+      width: 50px;
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <table id="table">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  
+  <script>
+    'use strict';
+
+    let tds = document.querySelectorAll('td');
+    let counter = 0;
+
+    for (let td of tds) {
+
+      td.addEventListener('click', function func () {
+        this.innerHTML = counter++;
+
+        if (counter == 1) {
+          this.innerHTML = 1;
+        } else if (counter == 2) {
+          this.innerHTML = 2;
+        } else {
+          this.innerHTML = 3;
+          counter = 0;
+        }
+
+        this.removeEventListener('click', func)
+      });
+
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="https://google.com1">Link</a>
+  <a href="https://google.com2">Link</a>
+  <a href="https://google.com3">Link</a>
+  <a href="https://google.com4">Link</a>
+  <a href="https://google.com5">Link</a>
+
+  <input type="button" value="check" id="button">
+
+  <script>
+    'use strict';
+
+    let links = document.querySelectorAll('a');
+    let button = document.querySelector('#button');
+
+    button.addEventListener('click', function func() {
+      for (let link of links) {
+        link.innerHTML += ' (' + link.href + ')';
+      }  
+
+      this.removeEventListener('click', func);
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>

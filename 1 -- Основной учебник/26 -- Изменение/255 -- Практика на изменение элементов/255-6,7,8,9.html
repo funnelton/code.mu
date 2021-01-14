@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    a {
+      text-decoration: none;
+    }
+
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      text-align: center;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <table id="table">
+  </table>
+
+  <input type="text" data-user-type="new" id="inputName">
+  <input type="text" data-user-type="new" id="inputAge">
+  <input type="text" data-user-type="new" id="inputSalary">
+  <input type="button" value="Add" id="button">
+
+  <script>
+    'use strict';
+
+    function createRemoveLink (row) {
+      let td = document.createElement('td');
+
+      let link = document.createElement('a');
+      link.innerHTML = ' Remove';
+      link.href = '';
+
+      td.appendChild(link);
+
+      link.addEventListener('click', function (event) {
+        let tr = (this.parentElement).parentElement;
+        event.preventDefault();
+        tr.remove();
+      });
+
+      row.appendChild(td);
+    }
+
+    function makeEditableCell () {
+      let cell = this;
+
+      let input = document.createElement('input');
+
+      input.value = this.innerHTML;
+      this.innerHTML = '';
+      this.appendChild(input);
+      input.focus();
+
+      this.removeEventListener('click', makeEditableCell);
+
+      input.addEventListener('blur', function () {
+        cell.innerHTML = this.value;
+
+        cell.addEventListener('click', makeEditableCell);
+      });
+    }
+
+
+    let employees = [
+      {name: 'employee1', age: 30, salary: 400},
+      {name: 'employee2', age: 31, salary: 500},
+      {name: 'employee3', age: 32, salary: 600},
+    ];
+
+    let table = document.querySelector('#table');
+
+    for (let employee of employees) {
+      let tr = document.createElement('tr');
+
+      for (let elem in employee) {
+        let td = document.createElement('td');
+        td.innerHTML = employee[elem];
+        td.addEventListener('click', makeEditableCell);
+        tr.appendChild(td);
+      }
+      createRemoveLink(tr);
+      table.appendChild(tr);
+    }
+
+    let button = document.querySelector('#button');
+
+    button.addEventListener('click', function () {
+      let fields = document.querySelectorAll('input[data-user-type="new"]');
+      let tr = document.createElement('tr');
+
+      for (let field of fields) {
+        let td = document.createElement('td');
+        td.innerHTML = field.value;
+        tr.appendChild(td);
+        td.addEventListener('click', makeEditableCell);
+        field.value = '';
+      }
+
+      createRemoveLink(tr);
+      table.appendChild(tr);
+
+    });
+  </script>
+</body>
+
+</html>

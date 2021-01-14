@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  function putQuestion(value) {
+    let str = String(value);
+    return str + '?';
+  }
+
+  function putExclamation(value) {
+    let str = String(value);
+    return str + '!';
+  }
+
+  function alternate(arr, callback1, callback2) {
+    let result = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 == 0) {
+          result.push(callback1(arr[i]));
+        } else {
+          result.push(callback2(arr[i]));
+        }
+    }
+
+    return result;
+  }
+
+  console.log(alternate(['asdqwefdnls', 2, 3, 'asd', 'asd'], putQuestion, putExclamation));
+
+
+</script>
+
+</body>
+</html>

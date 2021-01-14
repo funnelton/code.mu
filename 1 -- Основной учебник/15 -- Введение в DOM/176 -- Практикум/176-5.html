@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <input type="text" value="ФИО" id="input1">
+  <input type="text" value="Имя" id="input2">
+  <input type="text" value="Отчество" id="input3">
+  <input type="text" value="Фамилия" id="input4">
+
+
+  <script>
+    'use strict';
+    
+    let input1 = document.querySelector('#input1');
+    let input2 = document.querySelector('#input2');
+    let input3 = document.querySelector('#input3');
+    let input4 = document.querySelector('#input4');
+
+    input1.addEventListener('blur', function () {
+      let arr = (input1.value).split(' ');
+      
+      [input2.value, input3.value, input4.value] = arr;
+    });
+
+
+  </script>
+
+</body>
+
+</html>

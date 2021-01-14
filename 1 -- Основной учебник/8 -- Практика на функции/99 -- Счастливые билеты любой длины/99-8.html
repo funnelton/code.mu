@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    'use strict';
+
+    function getLast(digitsAmmount) {
+      let res = '';
+      for (let i = digitsAmmount; i > 0; i--) {
+        res += '9';
+      }
+
+      return Number(res);
+    }
+
+    function getFirst(digitsAmmount) {
+      let res = '11';
+
+      let zeroAmmount = (digitsAmmount / 2 + 1) - 2;
+
+      for (let i = 1; i <= zeroAmmount; i++) {
+        res = res.slice(0, 1) + '0' + res.slice(1);
+      }
+
+      return Number(res);
+    }
+
+    function formStr(data, length) {
+      let res = '';
+      while (res.length != length) {
+        res += String(data);
+      }
+
+      return res;
+    }
+
+    function getSum(str) {
+      let res = 0;
+      for (let i = 0; i < str.length; i++) {
+          res += Number(str[i]);
+      }
+
+      return res;
+    }
+
+    function normalizeNum(num, digitsAmount) {
+      let str = String(num);
+      return formStr('0', digitsAmount - str.length) + str;
+    }
+
+    function isLucky(num) {
+      let str = String(num);
+      let numLength = num.length / 2;
+
+      let firstArray = num.slice(0, numLength);
+      let secondArray = num.slice(numLength);
+
+      return getSum(firstArray) == getSum(secondArray);
+    }
+
+
+    function getLuckyTickets(digitsAmount) {
+      let result = [];
+
+      let first = getFirst(digitsAmount);
+      let last = getLast(digitsAmount);
+
+      for (let i = first; i <= last; i++) {
+        let ticketNum = normalizeNum(i, digitsAmount);
+
+        if (isLucky(ticketNum)) {
+          result.push(ticketNum);
+        }
+      }
+
+      return result;
+    }
+
+    console.log(getLuckyTickets(4));
+
+
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <input type="text" value="ФИО" id="input">
+
+  <script>
+    'use strict';
+
+    let input = document.querySelector('#input');
+    
+    input.addEventListener('blur', function () {
+      input.value = (input.value).split('.').reverse().join('-');
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>

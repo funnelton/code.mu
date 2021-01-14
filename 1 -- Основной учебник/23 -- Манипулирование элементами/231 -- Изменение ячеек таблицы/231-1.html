@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    td {
+      height: 50px;
+      width: 50px;
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <table id="table">
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr> 
+  </table>
+
+  <input type="button" value="Button" id="button">
+
+  <script>
+    'use strict';
+    let button = document.querySelector('#button');
+    let tds = document.querySelectorAll('td');
+
+    button.addEventListener('click', function () {
+      for (let td of tds) {
+        td.innerHTML = Number(td.innerHTML) * 2;
+      }
+    });
+
+  </script>
+</body>
+</html>

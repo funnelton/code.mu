@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="input">
+  <input type="button" value="Lock" id="button1">
+  <input type="button" value="Unlock" id="button2">
+
+  <script>
+    'use strict';
+
+    let input = document.querySelector('#input');
+    let lockButton = document.querySelector('#button1');
+    let unlockButton = document.querySelector('#button2');
+
+    lockButton.addEventListener('click', function () {
+      input.setAttribute('disabled', 'true');
+    });
+
+    unlockButton.addEventListener ('click', function () {
+      input.removeAttribute('disabled');
+    });
+
+  </script>
+</body>
+</html>

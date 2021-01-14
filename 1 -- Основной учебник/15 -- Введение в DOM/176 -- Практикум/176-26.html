@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="text" id="input1">
+  <input type="text" id="input2">
+  <input type="text" id="input3">
+  <input type="button" value="Button" id="button">
+  <div id="div"></div>
+
+  <script>
+    'use strict';
+
+    // function getSquareSqrt (a, b, c) {
+    //   a = Number(a);
+    //   b = Number(b);
+    //   c = Number(c);
+
+    //   let d = (b ** 2) - (4 * a * c);
+
+    //   if (d < 0) {
+    //     return 'Корней нет';
+    //   } else if (d == 0) {
+    //     let numeratorLeft = -b;
+    //     let numeratorRight = Math.sqrt((b ** 2) - (4 * a * c));
+    //     let denominator = 2 * a;
+    //     let x1 = (numeratorLeft + numeratorRight) / 2;
+
+    //     return x1;
+    //   } else {
+    //     let numeratorLeft = -b;
+    //     let numeratorRight = Math.sqrt((b ** 2) - (4 * a * c));
+    //     let denominator = 2 * a;
+    //     let x1 = (numeratorLeft + numeratorRight) / 2;
+    //     let x2 = (numeratorLeft - numeratorRight) / 2;
+
+    //     return x1 + ' | ' + x2;
+    //   }
+
+    // }
+
+    let input1 = document.querySelector('#input1');
+    let input2 = document.querySelector('#input2');
+    let input3 = document.querySelector('#input3');
+    let button = document.querySelector('#button');
+    let div = document.querySelector('#div');
+
+    button.addEventListener('click', function () {
+      let a = Number(input1.value);
+      let b = Number(input2.value);
+      let c = Number(input3.value);
+
+      let d = (b ** 2) - (4 * a * c);
+
+      if (d < 0) {
+        div.innerHTML = 'Корней нет';
+      } else if (d == 0) {
+        let numeratorLeft = -b;
+        let numeratorRight = Math.sqrt((b ** 2) - (4 * a * c));
+        let denominator = 2 * a;
+        let x1 = (numeratorLeft + numeratorRight) / 2;
+
+        div.innerHTML = x1;
+      } else {
+        let numeratorLeft = -b;
+        let numeratorRight = Math.sqrt((b ** 2) - (4 * a * c));
+        let denominator = 2 * a;
+        let x1 = (numeratorLeft + numeratorRight) / 2;
+        let x2 = (numeratorLeft - numeratorRight) / 2;
+
+        div.innerHTML =  x1 + ' | ' + x2;
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

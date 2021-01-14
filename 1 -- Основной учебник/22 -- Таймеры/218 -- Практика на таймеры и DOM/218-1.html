@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <input type="button" value="Button" id="button">
+  <p id="paragraph">1</p>
+
+  <script>
+    'use strict';
+
+    let button = document.querySelector('#button');
+    let paragraph = document.querySelector('#paragraph');
+
+    button.addEventListener('click', function () {
+      setInterval(function (self) {
+        self.innerHTML = Number(self.innerHTML) + 1;
+      }, 1000, paragraph);
+    });
+
+  </script>
+</body>
+</html>

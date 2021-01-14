@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+    }
+
+    .painted {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  
+  <table id="table">
+    <tr>
+      <td data-col="1"></td>
+      <td data-col="2"></td>
+      <td data-col="3"></td>
+    </tr>
+    <tr>
+      <td data-col="1"></td>
+      <td data-col="2"></td>
+      <td data-col="3"></td>
+    </tr>
+    <tr>
+      <td data-col="1"></td>
+      <td data-col="2"></td>
+      <td data-col="3"></td>
+    </tr>
+  </table>
+
+  <script>
+    'use strict';
+
+    let tds = document.querySelectorAll('td');
+
+    for (let td of tds) {
+      td.addEventListener('click', function () {
+        let chosen = this.dataset.col;
+
+        let allCols = document.querySelectorAll('[data-col="' + chosen + '"]');
+
+        for (let col of allCols) {
+          col.classList.toggle('painted');
+        }
+      });
+    }
+
+  </script>
+</body>
+</html>

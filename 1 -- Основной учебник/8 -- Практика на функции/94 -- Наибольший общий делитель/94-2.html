@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    'use strict';
+
+    function getDivisors(num) {
+      let res = [];
+
+      for (let i = 1; i <= num; i++) {
+        if (num % i == 0) {
+          res.push(i);
+        }
+      }
+
+      return res;
+    }
+
+    function inArray(elem, arr) {
+      return arr.indexOf(elem) !== -1;
+    }
+
+    function getSameDivisors(arr1, arr2) {
+      let res = [];
+
+      for (let elem of arr1) {
+        if (inArray(elem, arr2)) {
+          res.push(elem);
+        }
+      }
+
+      return res;
+    }
+
+    function getGreatestValue(arr) {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < arr[i + 1]) {
+          arr.shift();
+        }
+      }
+
+      for (let i = arr.length; i > 0; i--) {
+        if (arr[i] < arr[i - 1]) {
+          arr.pop();
+        }
+      }
+
+      if (arr.length != 1) {
+        getGreatestValue(arr);
+      }
+
+      return arr;
+    }
+
+    
+    function getGreatestCommonDivisor(num1, num2) {
+      let divisorsArr1 = getDivisors(num1);
+      let divisorsArr2 = getDivisors(num2);
+      
+      let sameDivisorsArr = getSameDivisors(divisorsArr1, divisorsArr2);
+      let greatestValue = getGreatestValue(sameDivisorsArr)[0];
+      
+      return greatestValue;
+    }
+    
+    function checkMutuallySimple(num1, num2) {
+      if (getGreatestCommonDivisor(num1, num2) == 1) {
+        return 'Digits are MutuallySimple'
+      }
+      else {
+        return getGreatestCommonDivisor(num1, num2);
+      }
+    }
+
+
+    /* --- TESTS --- */
+
+    // console.log(getDivisors(10));                                      // Get array of divisors
+    // console.log(inArray(3, [1, 2, 3, 4, 5]));                          // Show elem of array
+    // console.log(getSameDivisors([1, 2, 3, 4, 5, 6], [1, 3, 7, 5]));    // Show the same divisors
+    // console.log(getGreatestValue([1, 2, 3, 4, 5, 6]));                 // Get greatest value of array
+    // console.log(getGreatestValue([6, 5, 4, 3, 2, 1]));                 // Get greatest value of array
+    // console.log(getGreatestValue([6, 7, 4, 12, 2, 15]));               // Get greatest value of array
+    // console.log(checkMutuallySimple(1, -1, -10, 0));
+
+    console.log(checkMutuallySimple(3, 9));
+
+
+  </script>
+
+</body>
+
+</html>

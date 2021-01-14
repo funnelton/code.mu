@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    a {
+      text-decoration: none;
+    }
+
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <ul id="ul">
+
+  </ul>
+
+  <input type="text" name="" id="inputName">
+  <input type="text" name="" id="inputAge">
+  <input type="text" name="" id="inputSalary">
+
+  <input type="button" value="Add" id="button">
+
+  <script>
+    'use strict';
+
+    function editField () {
+      let self = this;
+
+      let input = document.createElement('input');
+
+      input.value = self.innerHTML;
+      self.innerHTML = '';
+      self.appendChild(input);
+
+      input.focus();
+
+      self.removeEventListener('click', editField);
+
+      input.addEventListener('blur', function () {
+        self.innerHTML = this.value;
+        self.addEventListener('click', editField);
+      });
+    }
+
+    function removeElem (parent) {
+      let link = document.createElement('a');
+      link.innerHTML = ' || Remove';
+      link.href = '';
+
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        parent.remove();
+      });
+
+      parent.appendChild(link);
+    }
+
+    function addSeparator (parent) {
+      let separator = document.createElement('span');
+      separator.innerHTML = ' -- ';
+      parent.appendChild(separator);
+    }
+
+    function clearFields (...fields) {
+      for (let field of fields) {
+        console.log(field.tagName);
+        if (field.tagName == 'INPUT') {
+          field.value = '';
+        } else {
+          field.innerHTML = '';
+        }
+      }
+    }
+
+    let employees = [
+      {name: 'employee1', age: 30, salary: 400},
+      {name: 'employee2', age: 31, salary: 500},
+      {name: 'employee3', age: 32, salary: 600},
+    ];
+
+    let ul = document.querySelector('#ul');
+
+    for (let employee of employees) {
+      let li = document.createElement('li');
+
+      for (let field in employee) {
+        let span = document.createElement('span');
+        span.innerHTML = employee[field];
+        span.addEventListener('click', editField);
+        li.appendChild(span);
+
+        addSeparator(li);
+      }
+
+      let last = li.lastElementChild;
+      last.remove();
+
+      removeElem(li);
+      ul.appendChild(li);
+    }
+
+    let inputName = document.querySelector('#inputName');
+    let inputAge = document.querySelector('#inputAge');
+    let inputSalary = document.querySelector('#inputSalary');
+    let button = document.querySelector('#button');
+
+    button.addEventListener('click', function () {
+      let li = document.createElement('li');
+
+      let name = document.createElement('span');
+      name.innerHTML = inputName.value;
+      name.addEventListener('click', editField);
+
+      let age = document.createElement('span');
+      age.innerHTML = inputAge.value;
+      age.addEventListener('click', editField);
+
+      let salary = document.createElement('span');
+      salary.innerHTML = inputSalary.value;
+      salary.addEventListener('click', editField);
+
+      li.appendChild(name);
+      addSeparator(li);
+      li.appendChild(age);
+      addSeparator(li);
+      li.appendChild(salary);
+      addSeparator(li);
+
+      let last = li.lastElementChild;
+      last.remove();
+
+      removeElem(li);
+      ul.appendChild(li);
+
+      clearFields(inputName, inputAge, inputSalary);
+    });
+
+
+    
+  </script>
+</body>
+
+</html>

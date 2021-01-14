@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    'use strict';
+
+    function inArray(elem, arr) {
+      return arr.indexOf(elem) !== -1;
+    }
+
+    function getInt(arr1, arr2) {
+      let res = [];
+
+      for (let elem of arr1) {
+          if (inArray(elem, arr2)) {
+            res.push(elem);
+          }
+      }
+
+      return res;
+    }
+
+    console.log( getInt([1, 2, 3], [2, 3, 4, 5]) );
+
+
+  </script>
+
+</body>
+
+</html>

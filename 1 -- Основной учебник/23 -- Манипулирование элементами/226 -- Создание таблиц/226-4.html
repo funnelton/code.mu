@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    td {
+      height: 50px;
+      width: 50px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="text" placeholder="Amount of rows" id="input1">
+  <input type="text" placeholder="Amount of columns" id="input2">
+  
+  <table id="table">
+
+  </table>
+
+  <script>
+    'use strict';
+
+    let rows = document.querySelector('#input1');
+    let columns = document.querySelector('#input2');
+    let table = document.querySelector('#table');
+
+    function makeTable (rows, columns, tableName) {
+      for (let i = 0; i < rows; i++) {
+          let tr = document.createElement('tr');
+
+          for (let j = 0; j < columns; j++) {
+            let td = document.createElement('td');
+
+            tr.appendChild(td);
+          }
+
+          tableName.appendChild(tr);
+        }
+    }
+
+    rows.addEventListener('blur', function () {
+      table.innerHTML = '';
+
+      makeTable(rows.value, columns.value, table);
+    });
+
+    columns.addEventListener('blur', function () {
+      table.innerHTML = '';
+
+      makeTable(rows.value, columns.value, table);
+    });
+
+  </script>
+</body>
+</html>

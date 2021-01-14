@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <input type="text" value="ФИО" id="input">
+  <div id="div"></div>
+
+  <script>
+    'use strict';
+    
+    let input = document.querySelector('#input');
+    let div = document.querySelector('#div');
+
+    input.addEventListener('blur', function () {
+      let arr = (input.value).split(' ');
+      div.innerHTML = arr.length;  
+    });
+
+  </script>
+
+</body>
+
+</html>

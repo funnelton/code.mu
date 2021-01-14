@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    'use strict';
+
+    let affairs = [
+        {
+            date:  '2019-12-29',
+            event: 'name1',
+        },
+        {
+            date:  '2019-12-31',
+            event: 'name2',
+        },
+        {
+            date:  '2019-12-29',
+            event: 'name3',
+        },
+        {
+            date:  '2019-12-30',
+            event: 'name4',
+        },
+        {
+            date:  '2019-12-29',
+            event: 'name5',
+        },
+        {
+            date:  '2019-12-31',
+            event: 'name6',
+        },
+        {
+            date:  '2019-12-29',
+            event: 'name7',
+        },
+        {
+            date:  '2019-12-30',
+            event: 'name8',
+        },
+        {
+            date:  '2019-12-30',
+            event: 'name9',
+        },
+    ]
+
+    let arr = [];
+
+    for (let affair of affairs) { // Проход по всему массиву affairs
+
+        if (arr.length == 0) { // Если длина массива 0 - запиши в него affair['date']
+            arr.push(affair['date']);
+
+        } else { // Если длина массива > 0 - сравни все его элементы с affair['date'], если они не одинаковые - запиши в arr значение affair['date']
+            for (let elem of arr) {
+
+                if (affair['date'] != elem) {
+                    arr.push(affair['date']);
+                }
+            }
+        }
+    }
+
+    console.log(arr);
+
+
+
+
+</script>
+
+</body>
+</html>

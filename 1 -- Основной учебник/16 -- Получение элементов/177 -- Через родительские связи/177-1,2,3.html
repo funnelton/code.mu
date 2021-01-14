@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <ul id="elem">
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+  </ul>
+
+  <script>
+    'use strict';
+
+    let elem = document.querySelector('#elem');
+
+    // 177-1
+    let first = elem.firstElementChild;
+    first.style.color = 'red';
+
+    // 177-2
+    let last = elem.lastElementChild;
+    last.style.color = 'red';
+
+    // 177-3
+    let lis = elem.children;
+    
+    for (let li of lis) {
+      li.innerHTML += '!';
+    }
+
+  </script>
+
+</body>
+</html>

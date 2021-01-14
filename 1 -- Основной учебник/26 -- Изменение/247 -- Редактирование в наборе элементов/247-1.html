@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li>1st</li>
+    <li>2nd</li>
+    <li>3rd</li>
+  </ul>
+  
+  <script>
+    'use strict';
+
+    let lis = document.querySelectorAll('li');
+
+    for (let li of lis) {
+      li.addEventListener('click', function addInput () {
+        let input = document.createElement('input');
+
+        input.value = this.innerHTML;
+        this.innerHTML = '';
+        this.appendChild(input);
+        this.removeEventListener('click', addInput);
+
+        input.addEventListener('blur', function () {
+          li.innerHTML = this.value;
+          li.addEventListener('click', addInput);
+        });
+      });
+    }
+
+  </script>
+</body>
+</html>

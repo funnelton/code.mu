@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    'use strict';
+
+    let data = [
+        {
+            country: 'Россия',
+            city:    'Москва',
+        },
+        {
+            country: 'Беларусь',
+            city:    'Минск',
+        },
+        {
+            country: 'Россия',
+            city:    'Питер',
+        },
+        {
+            country: 'Россия',
+            city:    'Владивосток',
+        },
+        {
+            country: 'Украина',
+            city:    'Львов',
+        },
+        {
+            country: 'Беларусь',
+            city:    'Могилев',
+        },
+        {
+            country: 'Украина',
+            city:    'Киев',
+        },
+    ];
+
+    let countries = {};
+
+    for (let obj of data) {
+        if (countries[obj.country] == undefined) {
+            countries[obj.country] = [];
+        }
+        countries[obj.country].push(obj.city);
+    }    
+
+    console.log(countries);
+
+
+</script>
+</body>
+</html>

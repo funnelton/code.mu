@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="parent">
+    <p id="elem">text</p>
+  </div>
+
+  <script>
+    'use strict';
+
+    let elem = document.querySelector('#elem');
+
+    elem.addEventListener('click', function () {
+      let input = document.createElement('input');
+      input.value = this.innerHTML;
+
+      elem.insertAdjacentElement('afterEnd', input);
+
+      input.addEventListener('blur', function () {
+        elem.innerHTML = this.value;
+        input.remove();
+      });
+    });
+  </script>
+</body>
+
+</html>

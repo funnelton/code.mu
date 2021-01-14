@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="div"></div>
+  <p id="p"></p>
+
+  <script>
+    'use strict';
+
+    let div = document.querySelector('#div');
+    let p = document.querySelector('#p');
+
+    for (let i = 0; i < 5; i++) {
+      let input = document.createElement('input');
+
+      input.addEventListener('blur', function () {
+        p.innerHTML = this.value;
+      });
+
+      div.appendChild(input);
+    }
+  </script>
+  
+</body>
+</html>

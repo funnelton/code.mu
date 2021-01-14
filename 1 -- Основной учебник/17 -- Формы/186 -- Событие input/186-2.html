@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="input">
+  <div></div>
+  
+<script>
+  'use strict';
+  
+  let input = document.querySelector('#input');
+  let div = document.querySelector('div');
+
+  input.addEventListener('input', function () {
+    let len = (input.value).length;
+    if (len <= 5) {
+      div.innerHTML = 'Доступно для ввода еще: ' + (5 - len);
+    } else {
+      div.innerHTML = 'Вы привысили кол-во символов на ' + (len - 5);
+    }
+  });
+
+</script>
+
+</body>
+</html>

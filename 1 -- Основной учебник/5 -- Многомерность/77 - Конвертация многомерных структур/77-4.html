@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    'use strict';
+
+    let events = [
+        {
+            date:  '2019-12',
+            event: 'name1'
+        },
+        {
+            date:  '2019-12',
+            event: 'name2'
+        },
+        {
+            date:  '2019-11',
+            event: 'name3'
+        },
+        {
+            date:  '2019-11',
+            event: 'name4'
+        },
+        {
+            date:  '2020-10',
+            event: 'name5'
+        },
+        {
+            date:  '2020-10',
+            event: 'name6'
+        },
+        {
+            date:  '2020-11',
+            event: 'name5'
+        },
+        {
+            date:  '2020-11',
+            event: 'name6'
+        },
+        {
+            date:  '2020-12',
+            event: 'name7'
+        },
+        {
+            date:  '2020-12',
+            event: 'name8'
+        },
+        {
+            date:  '2020-12',
+            event: 'name9'
+        },
+    ];
+    
+    let newEvents = {};
+
+    for (let obj of events) {
+
+        let date = obj.date.split('-');
+        let year = date[0];
+        let month = date[1];
+
+        if (newEvents[year] == undefined) {
+            newEvents[year] = {};
+        }
+
+        if (newEvents[year][month] == undefined) {
+            newEvents[year][month] = [];
+        }
+
+        newEvents[year][month].push(obj.event);
+
+
+    };
+
+    console.log(newEvents);
+
+
+</script>
+</body>
+</html>

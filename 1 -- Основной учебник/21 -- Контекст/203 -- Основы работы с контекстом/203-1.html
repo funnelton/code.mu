@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <input id="elem1" value="text1">
+  <input id="elem2" value="text2">
+
+  <script>
+    'use strict';
+
+    let elem1 = document.querySelector('#elem1');
+    elem1.addEventListener('blur', func);
+
+    let elem2 = document.querySelector('#elem2');
+    elem2.addEventListener('blur', func);
+
+    function func() {
+      console.log(this.value); // выведет или 'text1', или 'text2'
+    }
+  </script>
+</body>
+</html>

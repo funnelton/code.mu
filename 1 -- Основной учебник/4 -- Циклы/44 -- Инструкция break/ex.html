@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+'use strict';
+
+// #44.1
+// let arr = [1, 2, 0, 1, 7];
+
+// for (let elem of arr) {
+//     console.log(elem);
+//     if (elem == 0) {
+//         break;
+//     }
+// }
+
+// #44.2
+// let arr = [1, 2, 0, -1, 7];
+// let res = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < 0) {
+//         break;
+//     } else {
+//         res += arr[i];
+//     }
+// }
+// console.log(res);
+
+// #44.3
+// let arr = [1, 2, 0, -1, 7, 3];
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] == 3) {
+//         console.log(i);
+//     }
+    
+// } 
+let arr = [];
+let res = 0;
+
+for (let i = 1; res <= 100; i++) {
+    arr.push(i);
+    res += i;
+}
+
+console.log(arr);
+console.log(arr.length);
+console.log(res);
+
+</script>
+
+</body>
+</html>

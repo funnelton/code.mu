@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <p></p>
+  <p></p>
+  <p></p>
+
+  <script>
+    'use strict';
+
+    function changeInner(elem) {
+      elem.innerHTML += '!';
+    }
+
+    function forEach(selector, callback) {
+      let elems = document.querySelectorAll(selector);
+
+      for (let elem of elems) {
+        callback(elem);
+      }
+    }
+
+    forEach('p', changeInner);
+
+  </script>
+</body>
+
+</html>

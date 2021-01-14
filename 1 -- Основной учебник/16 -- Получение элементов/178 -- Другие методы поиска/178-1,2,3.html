@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="elem"></div>
+
+  <ul>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+  </ul>
+
+  <p class="www">elem 1</p>
+  <p class="www">elem 2</p>
+  <p class="www">elem 3</p>
+
+  <script>
+    'use strict';
+
+    // 178-1
+    let elem = document.getElementById('elem');
+    console.log(elem);
+
+    // 178-2
+    let lis = document.getElementsByTagName('li');
+
+    for (let li of lis) {
+      li.style.color = 'red';
+    }
+
+    // 178-3
+    let paragraphs = document.getElementsByClassName('www');
+
+    for (let paragraph of paragraphs) {
+      paragraph.style.color = 'red';
+    }
+
+  </script>
+</body>
+
+</html>

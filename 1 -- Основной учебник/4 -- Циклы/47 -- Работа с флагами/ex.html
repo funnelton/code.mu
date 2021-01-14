@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    'use strict';
+    
+    // #47.1
+
+	let arr = ['a', 'b', 'd', 'e'];
+    let flag = false;
+
+    for (let elem of arr) {
+        if (elem == 'c') {
+            flag = true;
+            break;
+        }
+    }
+
+    if (flag) {
+        console.log('+');
+    } else {
+        console.log('-');
+    }
+
+    
+
+
+
+</script>
+</body>
+</html>

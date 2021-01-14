@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  function returnLastDay (year, month) {
+    let date = new Date(year, month, 0);
+    let lastDay = date.getDate();
+    let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+    let day = date.getDay();
+
+    return days[day] + ' - ' + lastDay;
+  }
+
+  console.log(returnLastDay(2025, 5));
+
+</script>
+
+</body>
+</html>

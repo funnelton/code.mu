@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <a href="https://google.com">Link</a>
+
+
+<script>
+  'use strict';
+
+  function func () {
+    this.innerHTML += ' (' + this.href + ')';
+
+    this.removeEventListener('mouseover', func);
+  }
+
+
+  let link = document.querySelector('a');
+
+  link.addEventListener('mouseover', func);
+
+
+
+
+</script>
+
+</body>
+</html>

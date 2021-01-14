@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <input type="text" value="number" id="input">
+  <input type="button" value="check" id="button">
+
+  <script>
+    'use strict';
+
+    let input = document.querySelector('#input');
+    let button = document.querySelector('#button');
+
+    button.addEventListener('click', function () {
+      let arr = (input.value).split('');
+      let flag = false;
+      
+      for (let elem of arr) {
+        if (elem == 3) {
+          flag = true;
+          break;
+        }
+      } 
+
+      console.log(flag);
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>

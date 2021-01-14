@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        'use strict';
+
+        // #39.1
+        // let arr = ['a', 'b', 'c', 'd', 'e'];
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     console.log(arr[i])
+        // }
+
+        // #39.2
+        // let arr = [1, 2, 3, 4, 5];
+
+        // for (let i = 0; i <= arr.length - 1; i++) {
+        //     console.log(arr[i]);
+        // }
+
+        // #39.3
+        // let arr = [1, 2, 3, 4, 5];
+
+        // for (let i = 0; i < arr.length; i++) {
+
+        //     if (arr[i] % 2 != 0) {
+        //         console.log(arr[i]);
+        //     }
+        // }
+
+        // #39.4
+        // let arr = [1, 2, 3, 4, 5];
+        // let result = 0;
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     result += arr[i];
+        // }
+
+        // console.log(result);
+
+        // #39.5
+        // let arr = [1, 2, 3, 4, 5];
+        // let result = 0;
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     result += arr[i] ** 2;
+        // }
+
+        // console.log(result);
+
+        // #39.6
+
+        // let arr = [2, 5, 9, 15, 1, 4];
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (arr[i] > 3 && arr[i] < 10) {
+        //         console.log(arr[i]);
+        //     }
+        // }
+
+        // #39.7
+        // let arr = [2, 5, -9, 15, -1, -4];
+        // let res = 0;
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (arr[i] > 0) {
+        //         res += arr[i];
+        //     }
+        // }
+        // console.log(res);
+
+        // #39.8
+        // let arr = [1, 2, 3, 4, 5];
+        // let sum = 0;
+        // let avg;
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     sum += arr[i];
+        // }
+
+        // avg = sum / arr.length;
+        // console.log(avg);
+
+        // #39.9
+        // let arr = [10, 20, 30, 50, 235, 3000];
+        // let strNum;
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     strNum = String(arr[i]);
+        //     if (strNum[0] == 1 || strNum[0] == 2 || strNum[0] == 3) {
+        //         console.log(strNum);
+        //     }
+        // }
+
+        // #39.10
+        // let arr = [10, 20, 30, 50, 235, 3000];
+
+        // for (let i = arr.length - 1; i >= 0; i--) {
+        //     console.log(arr[i]);
+
+        // }
+
+        // #39.11
+        // let arr = [0, 2, 1, 3, 10, 5];
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (arr[i] == i) {
+        //         console.log(arr[i]);
+        //     }
+        // }
+
+        // #39.12
+        // let arr = [0, 2, 1, 3, 10, 5];
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     document.write(arr[i] + '<br>');
+
+        // }
+
+        // #39.13
+        // let arr = [0, 2, 1, 3, 10, 5];
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     document.write('<p>' + arr[i] + '</p>');
+
+        // }
+
+        // #39.14
+        // let arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (arr[i] == 'сб' || arr[i] == 'вс') {
+        //         document.write('<p> <b>' + arr[i] + '</b> </p>');
+        //     } else {
+        //         document.write('<p>' + arr[i] + '</p>');
+        //     }
+
+        // }
+
+        // #39.15
+
+        let arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+        let currentDay = 'вт';
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == currentDay) {
+                document.write('<p><i>' + arr[i] + '</i></p>');
+            } else if (arr[i] == 'сб' || arr[i] == 'вс') {
+                document.write('<p> <b>' + arr[i] + '</b> </p>');
+            }
+            else {
+                document.write('<p>' + arr[i] + '</p>');
+            }
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

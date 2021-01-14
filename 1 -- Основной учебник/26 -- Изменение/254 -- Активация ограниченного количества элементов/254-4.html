@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      text-align: center;
+    }
+
+    .active {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <table id="table">
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+  </table>
+  
+  <script>
+    'use strict';
+
+    let trs = document.querySelectorAll('tr');
+
+    let arr = [];
+
+
+    for (let tr of trs) {
+      let tds = tr.querySelectorAll('td');
+      arr.push(tds);
+    }
+
+   for (let i = 0; i < arr.length; i++) {
+     for (let j = 0; j < arr[i].length; j++) {
+       arr[i][j].addEventListener('click', function paint () {
+         let upper;
+         let lower;
+
+         if (arr[i - 1] == undefined) {
+           upper = 'is absent';
+         } else {
+           upper = arr[i - 1][j];
+         }
+
+         if (arr[i + 1] == undefined) {
+           lower = 'is absent';
+         } else {
+           lower = arr[i + 1][j];
+         }
+
+        if ((upper == 'is absent' || upper.className != 'active') && (lower == 'is absent' || lower.className != 'active')) {
+          this.classList.add('active');
+        } else {
+          this.removeEventListener('click', paint);
+        }
+       });
+     }
+   }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    'use strict';
+
+    let date1 = new Date(1988, 2, 1);
+    let date2 = new Date(2000, 0, 10);
+    let diff = date2.getTime() - date1.getTime();
+
+    let diffDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+
+
+    console.log(diffDays);
+  </script>
+
+</body>
+
+</html>

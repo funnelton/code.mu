@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="elem">text</button>
+  
+  <script>
+    'use strict';
+
+    
+    function func(event) {
+      if (event.type == 'click') {
+        this.style.backgroundColor = 'green';
+      } else if (event.type == 'dblclick') {
+        this.style.backgroundColor = 'red';
+      }
+    }
+
+    elem.addEventListener('click', func);
+    elem.addEventListener('dblclick', func);
+
+  </script>
+</body>
+</html>

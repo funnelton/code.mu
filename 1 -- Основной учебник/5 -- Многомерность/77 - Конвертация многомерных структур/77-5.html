@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    'use strict';
+
+    let data = [
+        {
+            year:  2019,
+            month: 11,
+            day: 20,
+            data: ['массив с данными']
+        },
+        {
+            year:  2019,
+            month: 11,
+            day: 21,
+            data: ['массив с данными']
+        },
+        {
+            year:  2019,
+            month: 12,
+            day: 25,
+            data: ['массив с данными']
+        },
+        {
+            year:  2019,
+            month: 12,
+            day: 26,
+            data: ['массив с данными']
+        },
+        {
+            year:  2020,
+            month: 10,
+            day: 29,
+            data: ['массив с данными']
+        },
+        {
+            year:  2020,
+            month: 10,
+            day: 30,
+            data: ['массив с данными']
+        },
+        {
+            year:  2020,
+            month: 11,
+            day: 19,
+            data: ['массив с данными']
+        },
+        {
+            year:  2020,
+            month: 11,
+            day: 20,
+            data: ['массив с данными']
+        },
+    ];
+
+    let res = {};
+
+    for (let obj of data) {
+        let year = obj.year;
+        let month = obj.month;
+        let day = obj.day;
+
+        if (res[year] == undefined) {
+            res[year] = {};
+        }
+
+        if (res[year][month] == undefined) {
+            res[year][month] = {};
+        }
+
+        if (res[year][month][day] == undefined) {
+            res[year][month][day] = [];
+        }
+
+        res[year][month][day].push(obj.data);
+    };
+
+    console.log(res);
+
+</script>
+</body>
+</html>

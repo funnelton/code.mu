@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    'use strict';
+
+    let ent = ['a', ['b', 'c', 'd'], ['e', 'f', ['g', ['j', 'k']]]];
+    let res = '';
+
+    function getStr(arr) {
+      for (let elem of arr) {
+        if (typeof(elem) == 'object') {
+          getStr(elem);
+        } else {
+          res += String(elem);
+        }
+      }
+
+      return res;
+    }
+
+    console.log(getStr(ent));
+
+
+
+  </script>
+
+</body>
+
+</html>

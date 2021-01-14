@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>Строка номер 1</div>
+  <div>Строка номер 2</div>
+  <div>lknfclkwwalksdm</div>
+  <div>Строка номер 4</div>
+  <div>Строка номер 5</div>
+  <div>Строка номер 6</div>
+  <div>Строка номер 7</div>
+  <div>Строка номер 8</div>
+  <div>Строка номер 9</div>
+  <div>Строка но</div>
+
+  <script>
+    'use strict';
+
+    let divs = document.querySelectorAll('div');
+
+    for (let div of divs) {
+      if ((div.innerHTML).length > 10) {
+        div.innerHTML = (div.innerHTML).slice(0, 10) + '...';
+      }
+    }
+
+
+  </script>
+
+</body>
+
+</html>

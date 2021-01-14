@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <p id="elem1">p1</p>
+  <p id="elem2">p2</p>
+  <p id="elem3">p3</p>
+  
+  <script>
+    'use strict';
+
+    function appendText (elem) {
+      elem.innerHTML += ' !';
+    }
+
+    let paragraphs = document.querySelectorAll('p');
+
+    for (let paragraph of paragraphs) {
+      appendText(paragraph);
+    }
+  </script>
+</body>
+</html>

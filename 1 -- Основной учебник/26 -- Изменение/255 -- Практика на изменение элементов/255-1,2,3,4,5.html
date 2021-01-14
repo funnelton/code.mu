@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <ul id="list">
+
+  </ul>
+
+  <script>
+    'use strict';
+
+    function addInput (parent) {
+      let input = document.createElement('input');
+      input.value = parent.innerHTML;
+
+      parent.innerHTML = '';
+      parent.appendChild(input);
+      input.focus();
+
+      
+      input.addEventListener('blur', function () {
+        parent.innerHTML = input.value;
+      });
+    }
+
+    function addingFunction () {
+      this.removeEventListener('click', addingFunction);
+      addInput(this);
+      this.addEventListener('click', addingFunction);
+    }
+
+    function removeParagraph (parent) {
+      let link = document.createElement('a');
+      link.innerHTML = '  [X]';
+      link.href = '';
+
+      parent.appendChild(link);
+
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        parent.remove();
+      });
+    }
+
+
+    let ul = document.querySelector('ul');
+
+    for (let i = 1; i <= 5; i++) {
+      let li = document.createElement('li');
+      let span = document.createElement('span');
+      span.innerHTML = i;
+      li.appendChild(span);
+      ul.appendChild(li);
+
+      removeParagraph(li);
+
+      span.addEventListener('click', addingFunction);
+    }
+
+    let body = document.querySelector('body');
+    let input = document.createElement('input');
+
+    body.appendChild(input);
+
+    input.addEventListener('change', function () {
+      let li = document.createElement('li');
+      let span = document.createElement('span');
+      
+      span.innerHTML = this.value;
+      this.value = '';
+      
+      li.appendChild(span);
+      ul.appendChild(li);
+      
+      removeParagraph(li);
+      span.addEventListener('click', addingFunction);
+    })
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  function mult(num, index) {
+    return num * index;
+  }
+
+  function each(arr, callback) {
+    let result = [];
+    let i = 0;
+
+    for (let elem of arr) {
+        result.push(callback(elem, i));
+        i++;
+    }
+
+    return result;
+  }
+
+  console.log(each([1, 2, 3, 4, 5], mult));
+
+  
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        // #12.1
+        let str = 'abcde';
+        console.log(str[0], str[2], str[4]);
+
+        // #12.2
+        let newStr = str[4] + str[3] + str[2] + str[1] + str[0];
+        console.log(newStr);
+
+        // #12.3
+        let num = 3;
+        console.log(str[num]);
+
+        // #12.4
+        console.log(str[str.length - 1]);
+
+        // #12.5
+        console.log(str[str.length - 2]);
+
+        // #12.6
+        console.log(str[str.length - 3]);
+
+        // #12.7
+        let test = '12345';
+        console.log(Number(test[0]) + Number(test[0]) + Number(test[1]) + Number(test[2]) + Number(test[3]) + Number(test[4]));
+
+        // #12.8
+        let testStr = 12345;
+        testStr = String(testStr);
+        console.log(Number(testStr[0]) + Number(testStr[0]) + Number(testStr[1]) + Number(testStr[2]) + Number(testStr[3]) + Number(testStr[4]));
+
+        // #12.9
+        let line = 12345;
+        line = String(line);
+        console.log(line[0] * line[1] * line[2] * line[3] * line[4]);
+
+        // #12.10
+        console.log(line[4] + line[3] + line[2] + line[1] + line[0]);
+    </script>
+</body>
+
+</html>

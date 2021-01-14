@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    'use strict';
+
+    let students = {
+        1: {
+            '1A': {
+                '#1': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 6
+                },    
+                '#2': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 7
+                },    
+                '#3': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 5
+                },    
+                '#4': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 8
+                },    
+            },
+            '1Б': {
+                '#1': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 6
+                },    
+                '#2': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 7
+                },    
+                '#3': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 5
+                },    
+                '#4': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 8
+                },    
+            }
+        },
+        2: {
+            '2A': {
+                '#1': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 8
+                },    
+                '#2': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 7
+                },    
+                '#3': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 9
+                },    
+                '#4': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 6
+                },    
+            },
+            '2Б': {
+                '#1': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 7
+                },    
+                '#2': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 8
+                },    
+                '#3': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 9
+                },    
+                '#4': {
+                    FN: 'Иван',
+                    SN: 'Иванович',
+                    LN: 'Иванов',
+                    age: 6
+                },    
+            }
+        },
+    };
+
+    for (let studentClass in students) {
+        document.write(studentClass + '<br>');
+        for (let classLiter in students[studentClass]) {
+            document.write('--' + classLiter + '<br>'); 
+            for (let studentId in students[studentClass][classLiter]) {
+                document.write('----' + studentId + '<br>');
+            }           
+        }
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

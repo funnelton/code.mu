@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p></p>
+  <input type="text" placeholder="Enter date like dd.mm.yyyyy" id="input">
+
+
+  <script>
+    'use strict';
+
+    function defineDayofWeek (num) {
+      let day = Number(num);
+      let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб']
+
+      return days[day];
+    }
+
+    function getDay (date) {
+      let year = Number(date.slice(6));
+      let month = Number(date.slice(3, 5));
+      let day = Number(date.slice(0, 3));
+
+      let correctDate = new Date(year, month - 1, day);
+      let dayNumber = correctDate.getDay();
+      
+      return defineDayofWeek(dayNumber);
+    }
+
+    let input = document.querySelector('#input');
+    let paragraph = document.querySelector('p');
+
+    input.addEventListener('blur', function () {
+      paragraph.innerHTML = getDay(input.value);
+    });
+
+    
+
+
+
+  </script>
+
+</body>
+
+</html>

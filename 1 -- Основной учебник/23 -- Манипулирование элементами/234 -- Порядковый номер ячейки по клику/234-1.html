@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    td {
+      height: 50px;
+      width: 50px;
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <table id="table">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  
+  <script>
+    'use strict';
+
+    let tds = document.querySelectorAll('td');
+
+    for (let i = 0, j = tds.length; i < tds.length; i++, j--) {
+      tds[i].addEventListener('click', function () {
+        this.innerHTML = j;
+      }); 
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="checkbox">
+  <input type="button" value="Check" id="button">
+  <p></p>
+
+
+  <script>
+    'use strict';
+    
+    let checkbox = document.querySelector('#checkbox');
+    let button = document.querySelector('#button');
+    let paragraph = document.querySelector('p');
+
+    button.addEventListener('click', function () {
+      if (checkbox.checked) {
+        paragraph.innerHTML = 'Привет';
+      } else {
+        paragraph.innerHTML = 'Пока';
+      }
+    })
+
+  </script>
+
+</body>
+</html>

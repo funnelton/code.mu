@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+  <style>
+    .colored {
+      background-color: red;
+    }
+
+    .crossed {
+      text-decoration: line-through;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+  </style>
+<body>
+
+  <div>text</div>
+  <input type="button" value="Cross" id="button1">
+  <input type="button" value="Make bold" id="button2">
+  <input type="button" value="Make red" id="button3">
+  
+<script>
+  'use strict';
+
+  let div = document.querySelector('div');
+  let button1 = document.querySelector('#button1');
+  let button2 = document.querySelector('#button2');
+  let button3 = document.querySelector('#button3');
+
+  button1.addEventListener('click', function () {
+    div.classList.toggle('crossed');  
+  });
+
+  button2.addEventListener('click', function () {
+    div.classList.toggle('bold');  
+  });
+
+  button3.addEventListener('click', function () {
+    div.classList.toggle('colored');  
+  });
+
+</script>
+
+</body>
+</html>

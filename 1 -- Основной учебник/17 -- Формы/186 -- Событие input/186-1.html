@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="input">
+  
+<script>
+  'use strict';
+
+  let input = document.querySelector('#input');
+
+  input.addEventListener('input', function () {
+    if ((input.value).length >= 5) {
+      alert('Amount of symbols more than 5');
+    }
+  })
+</script>
+
+</body>
+</html>

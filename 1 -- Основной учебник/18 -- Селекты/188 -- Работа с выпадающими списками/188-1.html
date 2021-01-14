@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <select id="select">
+    <option>one</option>
+    <option>two</option>
+    <option>three</option>
+  </select>
+  
+  <input type="button" value="Button" id="button">
+
+  <p id="paragraph"></p>
+
+
+  <script>
+    'use strict';
+
+    let select = document.querySelector('#select');
+    let paragraph = document.querySelector('#paragraph');
+    let button = document.querySelector('#button');
+
+    button.addEventListener('click', function () {
+      paragraph.innerHTML = select.value;
+    });
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li>TEXT - 1 </li>
+    <li>TEXT - 2</li>
+    <li>TEXT - 3</li>
+    <li>TEXT - 4</li>
+    <li>TEXT - 5</li>
+  </ul>
+  
+  <script>
+    'use strict';
+
+    let lis = document.querySelectorAll('li');
+
+    for (let li of lis) {
+      let remove = document.createElement('a');
+      remove.href = '';
+      remove.innerHTML = ' --- Remove';
+
+      li.appendChild(remove);
+
+      remove.addEventListener('click', function (event) {
+        event.preventDefault();
+                
+        li.remove();
+      });
+    }
+
+  </script>
+</body>
+</html>

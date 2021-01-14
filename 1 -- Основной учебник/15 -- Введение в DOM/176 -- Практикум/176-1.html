@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <input type="text" value="input" id="input">
+  <div id="div">sad</div>
+
+<script>
+  'use strict';
+
+  let input = document.querySelector('#input');
+  let div = document.querySelector('#div');
+
+  input.addEventListener('blur', function () {
+    div.innerHTML += input.value;  
+    input.value = input.getAttribute('value');
+  });
+
+</script>
+
+</body>
+</html>

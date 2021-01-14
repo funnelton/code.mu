@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="input1">
+  <input type="text" id="input2">
+
+  <script>
+    'use strict';
+
+    let input1 = document.querySelector('#input1');
+    let input2 = document.querySelector('#input2');
+
+    input1.addEventListener('input', function () {
+      let arr = (input1.value).split(' ');
+
+      if (arr.length - 1 >= 2) {
+        input2.focus();
+      }
+    });
+  </script>
+</body>
+</html>

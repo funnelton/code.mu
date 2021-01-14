@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="text" id="input">
+  <input type="button" value="Mix" id="button">
+
+  <script>
+    'use strict';
+
+    function getRandomInt(min, max) {
+      return Math.round(Math.random() * (max - min) + min);
+    }
+
+    function getMixedStr (str) {
+      let result = [];
+      let arr = str.split('');
+
+      while (arr.length > 0) {
+        let randomLitter = arr.splice(getRandomInt(0, arr.length - 1), 1);
+        result.push(randomLitter);
+      }
+
+      return result.join('');
+    }
+
+    let input = document.querySelector('#input');
+    let button = document.querySelector('#button');
+
+    button.addEventListener('click', function () {
+      input.value = getMixedStr(input.value);
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>

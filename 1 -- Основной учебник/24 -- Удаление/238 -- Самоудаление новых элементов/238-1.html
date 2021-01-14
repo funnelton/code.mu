@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <ul id="parent">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  
+  <input type="submit" id="button">
+
+  <script>
+    'use strict';
+
+    function removeElement (arr) {
+      for (let elem of arr) {
+        elem.addEventListener('click', function () {
+          elem.remove();
+        });
+      }
+    }
+
+    let parent = document.querySelector('#parent');
+    let button = document.querySelector('#button');
+    let lis = parent.querySelectorAll('li');
+    let childrenArr = parent.querySelectorAll('li');
+
+    removeElement(childrenArr);
+
+    button.addEventListener('click', function () {
+      let li = document.createElement('li');
+      li.innerHTML = 'new Element';
+
+      parent.appendChild(li);
+      lis = parent.querySelectorAll('li');
+      
+      removeElement(lis);
+
+      
+    });
+  </script>
+</body>
+</html>

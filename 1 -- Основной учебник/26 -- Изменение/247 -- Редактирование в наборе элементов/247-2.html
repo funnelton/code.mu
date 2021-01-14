@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+<table id="table">
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+  </tr>
+</table>
+  
+  <script>
+    'use strict';
+
+   let tds = document.querySelectorAll('td');
+
+   for (let td of tds) {
+     td.addEventListener('click', function addInput () {
+      let input = document.createElement('input');
+
+      input.value = this.innerHTML;
+      this.innerHTML = '';
+      this.appendChild(input);
+      this.removeEventListener('click', addInput);
+
+      input.addEventListener('blur', function () {
+        td.innerHTML = this.value;
+        td.addEventListener('click', addInput);
+      });
+
+     });
+   }
+
+  </script>
+</body>
+</html>

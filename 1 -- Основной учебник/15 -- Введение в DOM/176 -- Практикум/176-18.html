@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    input {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="text" id="input">
+  <p></p>
+
+
+
+  <script>
+    'use strict';
+
+    let input = document.querySelector('#input');
+    let paragraph = document.querySelector('p');
+
+    input.addEventListener('keydown', function () {
+      if (event.key == 'Enter') {
+        if (paragraph.innerHTML == '') {
+          paragraph.innerHTML += input.value;
+        } else {
+          paragraph.innerHTML += ', ' + input.value;  
+        }
+
+        input.value = '';
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+  'use strict';
+
+
+  function getSum(str) {
+    let res = 0;
+    for (let i = 0; i < str.length; i++) {
+        res += Number(str[i]);
+    }
+
+    return res;
+  }
+
+  function isLucky(num) {
+    let numLength = num.length / 2;
+
+    let firstArray = num.slice(0, numLength);
+    let secondArray = num.slice(numLength);
+
+    return getSum(firstArray) == getSum(secondArray);
+  }
+
+  console.log(isLucky('1203'));
+  console.log(isLucky('012003'));
+  console.log(isLucky('123006'));
+  console.log(isLucky('33'));
+
+</script>
+
+</body>
+</html>

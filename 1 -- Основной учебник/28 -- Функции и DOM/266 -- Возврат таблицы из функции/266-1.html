@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="div"></div>
+
+  <script>
+    'use strict';
+
+    function createTable(rowAmount, colAmount) {
+
+
+      let table = document.createElement('table');
+
+      for (let i = 0; i < rowAmount; i++) {
+        let tr = document.createElement('tr');
+
+        for (let j = 0; j < colAmount; j++) {
+          let td = document.createElement('td');
+
+          tr.appendChild(td);
+        }
+
+        table.appendChild(tr);
+      }
+
+      return table;
+    }
+
+    let div = document.querySelector('#div');
+    let table = createTable(3, 3);
+    table.style.backgroundColor = 'red';
+    div.appendChild(table);
+    
+  </script>
+</body>
+
+</html>

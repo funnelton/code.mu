@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  function getSum(arr) {
+    let res = 0;
+
+    for (let elem of arr) {
+        res += elem;
+    }
+
+    return res;
+  }
+
+  document.write(getSum([1, 2, 3, 4, 5, 6]));
+  document.write('<br>');
+  document.write(getSum([1, 1, 7, 4, 5, 9]));
+  document.write('<br>');
+  document.write(getSum([10, 12, 3, 134, 6]));
+
+</script>
+
+</body>
+</html>

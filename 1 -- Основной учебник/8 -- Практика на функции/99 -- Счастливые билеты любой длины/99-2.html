@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+  'use strict';
+
+  function normalizeNum(num, length) {
+    let str = String(num);
+    
+    while (str.length != length) {
+      str = '0' + str;
+    }
+    
+    return str;
+  }
+
+  console.log(normalizeNum(123, 6)); // выведет '000123'
+  console.log(normalizeNum(1234, 6)); // выведет '001234'
+  console.log(normalizeNum(12345, 6)); // выведет '012345'
+  console.log(normalizeNum(123456, 6)); // выведет '123456'
+
+
+
+</script>
+
+</body>
+</html>

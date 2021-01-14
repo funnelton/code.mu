@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    'use strict';
+
+    let affairs = [
+        {
+            name: 'affair 1',
+            done: false
+        },
+        {
+            name: 'affair 2',
+            done: true
+        },
+        {
+            name: 'affair 3',
+            done: false
+        },
+        {
+            name: 'affair 4',
+            done: true
+        },
+    ];
+
+    let doneAffairs = [];
+    let notDoneAffairs = [];
+
+    for (let affair of affairs) {
+        if (affair.done == true) {
+            doneAffairs.push(affair.name)
+        } else {
+            notDoneAffairs.push(affair.name);
+        }
+        
+    }
+
+    document.write('Done affairs: [' + doneAffairs + '] <br>');
+    document.write('Not done affairs: [' + notDoneAffairs + ']');
+
+
+
+
+</script>
+
+</body>
+</html>

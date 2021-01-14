@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    'use strict';
+
+    // let affairs = [
+    //     {
+    //         date:  '2019-12-29',
+    //         event: 'name1'
+    //     },
+    //     {
+    //         date:  '2019-12-31',
+    //         event: 'name2'
+    //     },
+    //     {
+    //         date:  '2019-12-29',
+    //         event: 'name3'
+    //     },
+    //     {
+    //         date:  '2019-12-30',
+    //         event: 'name4'
+    //     },
+    //     {
+    //         date:  '2019-12-29',
+    //         event: 'name5'
+    //     },
+    //     {
+    //         date:  '2019-12-31',
+    //         event: 'name6'
+    //     },
+    //     {
+    //         date:  '2019-12-29',
+    //         event: 'name7'
+    //     },
+    //     {
+    //         date:  '2019-12-30',
+    //         event: 'name8'
+    //     },
+    //     {
+    //         date:  '2019-12-30',
+    //         event: 'name9'
+    //     },
+    // ];
+
+    // let date = '2019-12-30';
+    // let res = [];
+
+    // for (let elem of affairs) {
+    //     if (elem.date == date) {
+    //         res.push(elem.event);
+    //     }
+    // }
+
+    // document.write(res);
+
+
+    let affairs = {
+        '2019-12-29': ['event1', 'event2', 'event3'],
+        '2019-12-30': ['event4', 'event5', 'event6'],
+        '2019-12-31': ['event7', 'event8', 'event9'],
+    }
+
+    let date = '2019-12-31';
+    
+    for (let affairsDate in affairs) {
+        if (date == affairsDate) {
+            document.write(affairs[affairsDate]);        
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

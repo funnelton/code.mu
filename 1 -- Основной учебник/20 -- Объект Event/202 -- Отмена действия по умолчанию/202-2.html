@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      padding: 15px;
+    }
+    a {
+      padding: 15px;
+      display: inline-block;
+      background-color: grey;
+      color: white;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <input type="text" id="input1">
+  <input type="text" id="input2">
+  <a href="https://google.com" id="button">Button</a>
+  <p id="paragraph"></p>
+  
+  <script>
+    'use strict';
+
+    let input1 = document.querySelector('#input1');
+    let input2 = document.querySelector('#input2');
+    let button = document.querySelector('#button');
+    let paragraph = document.querySelector('#paragraph');
+
+    button.addEventListener('click', function (event) {
+        event.preventDefault();
+        paragraph.innerHTML = Number(input1.value) + Number(input2.value);
+    });
+
+
+  </script>
+</body>
+</html>

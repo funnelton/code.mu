@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+    }
+
+    .painted {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  
+  <table id="table">
+    <tr>
+      <td data-row="1" data-col="1"></td>
+      <td data-row="1" data-col="2"></td>
+      <td data-row="1" data-col="3"></td>
+    </tr>
+    <tr>
+      <td data-row="2" data-col="1"></td>
+      <td data-row="2" data-col="2"></td>
+      <td data-row="2" data-col="3"></td>
+    </tr>
+    <tr>
+      <td data-row="3" data-col="1"></td>
+      <td data-row="3" data-col="2"></td>
+      <td data-row="3" data-col="3"></td>
+    </tr>
+  </table>
+
+  <input type="button" value="Paint" id="button">
+  <script>
+    'use strict';
+
+    let col = 2;
+    let row = 2;
+
+    let button = document.querySelector('#button');
+
+    button.addEventListener('click', function () {
+      let elem = document.querySelector('[data-row="' + row + '"][data-col="' + col + '"');
+      elem.classList.add('painted');
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+  // 'use strict';
+
+  function formStr(data, length) {
+    let res = '';
+    while (res.length != length) {
+      res += String(data);
+    }
+
+    return res;
+  }
+
+  function getSum(str) {
+    let res = 0;
+    for (let i = 0; i < str.length; i++) {
+        res += Number(str[i]);
+    }
+
+    return res;
+  }
+
+  function normalizeNum(num, digitsAmount) {
+    let str = String(num);
+    return formStr('0', digitsAmount - str.length) + str;
+  }
+
+  function isLucky(num) {
+    let str = String(num);
+    let numLength = num.length / 2;
+
+    let firstArray = num.slice(0, numLength);
+    let secondArray = num.slice(numLength);
+
+    return getSum(firstArray) == getSum(secondArray);
+  }
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    'use strict';
+
+    function checkYear(year) {
+      let date = new Date(year, 2, 0);
+      if (date.getDate() == 29) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function showNext(year) {
+      let flag = false;
+      let num = 1;
+
+      year = year + num;
+
+      while (flag == false) {
+        if (checkYear(year)) {
+          flag = true;
+        } else {
+          year = year + num;
+          checkYear(year);
+        }
+      }
+
+      return year;
+    }
+
+    console.log(showNext(2015));
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    'use strict';
+
+    function getRandomInt(min, max) {
+        let num = Math.floor(Math.random() * (max - min + 1) + min);
+        return num;
+    }
+
+    function getRandomArray(length) {
+        let arr = [];
+        while (arr.length < length) {
+            arr.push(getRandomInt(-1000, 1000));
+        }
+        return arr;
+    }
+
+    console.log('Random array: ' + getRandomArray(10));
+
+
+
+</script>
+
+</body>
+</html>

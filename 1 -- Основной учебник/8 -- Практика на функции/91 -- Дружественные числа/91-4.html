@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  function isFreindly(num1, num2) {
+	let sum1 = getSum(getOwnDivisors(num1));
+	let sum2 = getSum(getOwnDivisors(num2));
+	
+    if (sum1 == num2 && sum2 == num1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function getOwnDivisors(num) {
+    let res = [];
+    for (let i = 1; i < num; i++) {
+        if (num % i == 0) {
+          res.push(i);
+        }
+    }
+    return res;
+  }
+
+  function getSum(arr) {
+    let res = 0;
+
+    for (let elem of arr) {
+        res += elem;
+    }
+    return res;
+  }
+
+  function getFriendly(num1, num2) {
+    let res = [[]];
+
+    for (let i = num1; i <= num2; i++) {
+
+    }
+  }
+
+  
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  function showDay() {
+    return (new Date).getDate();
+  }
+
+  function showMonth() {
+    return (new Date).getMonth() + 1;
+  }
+
+  function showYear() {
+    return (new Date).getFullYear();
+  }
+
+  let arr = [,,];
+
+  let [year = showYear(), month = showMonth(), day = showDay()] = arr;
+
+  console.log(year);
+  console.log(month);
+  console.log(day);
+
+</script>
+
+</body>
+</html>

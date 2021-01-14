@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    'use strict';
+
+    let ent = [1, [2, 7, 8], [3, 4], [5, [6, 7, ]]];
+
+    function checkElements(arr) {
+
+      for (let elem of arr) {
+        
+        if(typeof(elem) == 'object') {
+          let flag = false;
+
+          for (let subElem of elem) {
+            if (typeof(subElem) == 'object') {
+              flag = true;
+            }
+          }
+
+          if (flag == true) {
+            checkElements(elem);
+          } else {
+            console.log(elem);
+          }
+
+        }
+      }
+    }
+
+    checkElements(ent);
+
+
+  </script>
+
+</body>
+
+</html>

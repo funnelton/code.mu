@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'; 
+
+        // #33.1
+        // let a = 2 * (3 - 1);
+        // let b = 6 - 2;
+        // console.log(a == b);
+
+        // #33.2
+        // let a = 5 * (7 - 4);
+        // let b = 1 + 2 + 7;
+        // console.log(a < b);
+
+        // #33.3
+        // let a = 2 ** 4;
+        // let b = 4 ** 2;
+        // console.log(a != b);
+
+        // #33.4(learnjs.ru)
+
+        let login = prompt('Введите логин');
+        let password;
+
+        if (login == 'Админ') {
+            password = prompt('Введите пароль')
+
+            if (password == 'Я главный') {
+                alert('Здравствуйте!');
+            } else if (password == '' || password == null) {
+                alert('Отменено');
+            } else {
+                alert('Неверный пароль');
+            }
+        } else if (login == '' || login == null) {
+            alert('Отменено');
+        } else {
+            alert('Я вас не знаю');
+        }
+    </script>
+</body>
+</html>

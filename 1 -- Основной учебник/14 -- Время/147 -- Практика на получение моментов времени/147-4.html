@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    'use strict';
+
+    let now = new Date();
+    let result = [];
+
+    for (let month = 0; month <= 11; month++) {
+      let date = new Date (now.getFullYear(), month, 13);
+
+      if (date.getDay() == 5) {
+        result.push(date);
+      }
+    }
+
+    console.log(result);
+
+  </script>
+
+</body>
+
+</html>

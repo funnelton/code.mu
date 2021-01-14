@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        'use strict';
+
+        let students = {
+            'group1': {
+                'subgroup11': ['student111', 'student112', 'student113'],
+                'subgroup12': ['student121', 'student122', 'student123'],
+            },
+            'group2': {
+                'subgroup21': ['student211', 'student212', 'student213'],
+                'subgroup22': ['student221', 'student222', 'student223'],
+            },
+            'group3': {
+                'subgroup31': ['student311', 'student312', 'student313'],
+                'subgroup32': ['student321', 'student322', 'student323'],
+            },
+        };
+
+
+        function addStudent(group, subGroup, student) {
+            if (students[group] === undefined) {
+                students[group] = {};
+                students[group][subGroup] = [];
+            } else if (students[group][subGroup] === undefined) {
+                students[group][subGroup] = [];
+            }
+
+            students[group][subGroup].push(student);
+        }
+
+        addStudent('group0', 'subgroup11', 'vitalii');
+        addStudent('group1', 'subgroup1', 'vitalii');
+        addStudent('group1', 'subgroup11', 'vitalii');
+        console.log(students);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

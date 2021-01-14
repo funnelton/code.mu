@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  function getDigits(num) {
+    return String(num).split('');
+  }
+
+
+  function getSum(arr) {
+    let sum = 0;
+
+    for (let elem of arr) {
+        sum += Number(elem);
+    }
+    return sum;
+  }
+
+
+  function inRange(num) {
+    num = getSum(getDigits(num));
+    return num >= 1 && num <= 9;
+  }
+
+  let arr = [12, 19, 28, 13, 14, 345];
+  let result = [];
+
+  for (let elem of arr) {
+      if (inRange(elem)) {
+        result.push(elem);
+      }
+  }
+
+  console.log(result);
+</script>
+
+</body>
+</html>

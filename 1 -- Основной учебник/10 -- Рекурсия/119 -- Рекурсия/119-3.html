@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    'use strict';
+
+    function getSum(arr) {
+      let sum = 0;
+
+      for (let elem of arr) {
+        sum += Number(elem);
+      }
+
+      return sum;
+    }
+
+    function divideNum(num) {
+      let str = String(num).split('');
+      return str;
+    }
+
+    function checkNumber(num) {
+      num = getSum(divideNum(num));
+      if (num <= 9) {
+        console.log('+');
+      } else {
+        checkNumber(num);
+      }
+    }
+
+    checkNumber(12);
+    checkNumber(55);
+    checkNumber(551);
+
+  </script>
+
+</body>
+
+</html>

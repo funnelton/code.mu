@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <img src="https://google.com" alt="">
+  <p></p>
+  <input id="button" type="button" value="button">
+  
+<script>
+  'use strict';
+
+  let img = document.querySelector('img');
+  let p = document.querySelector('p');
+  let button = document.querySelector('#button');
+
+  button.addEventListener('click', function () {
+    p.innerHTML = img.src;
+  });
+
+
+
+</script>
+
+</body>
+</html>

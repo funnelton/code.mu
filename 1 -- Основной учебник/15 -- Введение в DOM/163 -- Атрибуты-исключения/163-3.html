@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="elem" class="aaa bbb ccc"></div>
+  <input type="button" id="button" value="button">
+
+  <script>
+    'use strict';
+
+    let elem = document.querySelector('#elem');
+    let button = document.querySelector('#button');
+
+    button.addEventListener('click', function () {
+      let cl = (elem.className).split(' ');
+      console.log(cl);
+      console.log(typeof(cl));
+    });
+
+  </script>
+
+</body>
+
+</html>

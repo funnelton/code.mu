@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input, select {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <select id="select">
+    <option>ВС</option>
+    <option>ПН</option>
+    <option>ВТ</option>
+    <option>СР</option>
+    <option>ЧТ</option>
+    <option>ПТ</option>
+    <option>СБ</option>
+  </select>
+
+  <script>
+    'use strict';
+
+    let select = document.querySelector('#select');
+
+    let date = new Date();
+    let day = date.getDay();
+
+    select.selectedIndex = day;
+
+  </script>
+</body>
+</html>

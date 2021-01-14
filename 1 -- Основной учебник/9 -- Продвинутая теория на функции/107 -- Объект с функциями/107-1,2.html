@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  'use strict';
+
+  let obj = {
+    func1 : function() {return 1;},
+    func2 : function() {return 2;},
+    func3 : function() {return 3;},
+  };
+
+  // console.log(obj.func1());
+  
+  for (let key in obj) {
+      console.log(obj[key]());
+  }
+
+</script>
+
+</body>
+</html>

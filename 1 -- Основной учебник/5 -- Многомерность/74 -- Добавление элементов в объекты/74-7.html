@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        'use strict';
+
+
+        let affairs = {
+            2018: {
+                11: {
+                    29: ['дело111', 'дело112', 'дело113'],
+                    30: ['дело121', 'дело122', 'дело123'],
+                },
+                12: {
+                    30: ['дело211', 'дело212', 'дело213'],
+                    31: ['дело221', 'дело222', 'дело223'],
+                },
+            },
+            2019: {
+                12: {
+                    29: ['дело311', 'дело312', 'дело313'],
+                    30: ['дело321', 'дело322', 'дело323'],
+                    31: ['дело331', 'дело332', 'дело333'],
+                }
+            },
+        };
+
+        function addAffair(year, month, day, affair) {
+            if (affairs[year] === undefined) {
+                affairs[year] = {};
+                affairs[year][month] = {};
+                affairs[year][month][day] = [];
+            } else if (affairs[year][month] === undefined) {
+                affairs[year][month] = {};
+                affairs[year][month][day] = [];
+            } else if (affairs[year][month][day] === undefined) {
+                affairs[year][month][day] = [];
+            }
+
+            affairs[year][month][day].push(affair);
+        }
+
+        addAffair(2018, 11, 29, 'affair1');
+        addAffair(2018, 11, 28, 'affair1');
+        addAffair(2018, 10, 29, 'affair1');
+        addAffair(2017, 10, 29, 'affair1');
+
+        console.log(affairs);
+
+    </script>
+
+</body>
+
+</html>

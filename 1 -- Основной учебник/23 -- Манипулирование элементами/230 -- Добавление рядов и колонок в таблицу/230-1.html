@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    td {
+      text-align: center;
+      height: 50px;
+      width: 50px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <table id="table">
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <input type="button" value="Add row" id="button">
+  
+
+  <script>
+    'use strict';
+
+    let table = document.querySelector('#table');
+    let button = document.querySelector('#button');
+    let tr = document.querySelector('tr');
+    let tds = tr.querySelectorAll('td');
+
+    button.addEventListener('click', function () {
+      let newTr = document.createElement('tr');
+      
+      for (let i = 0; i < tds.length; i++) {
+        let td = document.createElement('td');
+
+        newTr.appendChild(td);
+      }
+
+      table.appendChild(newTr);
+    });
+
+  </script>
+</body>
+</html>
